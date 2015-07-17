@@ -1,0 +1,4 @@
+
+const UPDATE_USER_LOCATION = "UPDATE_USER_LOCATION";
+
+module.exports = { UPDATE_USER_LOCATION };

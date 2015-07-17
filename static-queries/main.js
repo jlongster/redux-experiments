@@ -6,6 +6,8 @@ const reducers = require('./reducers');
 const actions = require('./actions');
 const dom = React.DOM;
 
+// Specify paths into the app state statically. We now know exactly
+// what this component depends on!
 let App = React.createClass({
   statics: {
     localQueries: ['position', 'user.attrs.location'],
@@ -13,6 +15,7 @@ let App = React.createClass({
   },
 
   render: function() {
+    console.log('renderin');
     const actions = this.props.actions;
 
     return dom.div(
@@ -35,6 +38,10 @@ let App = React.createClass({
 // "lift" it into a component that automatically binds to the app
 // state according to its local queries. Normally you would do
 // `module.exports = connect(App)`
+//
+// This would be a "smart" component. If you want access to the dumb
+// version of this component, it is available on the `App.dumb` static
+// property.
 App = connect(App);
 
 const store = createStore(combineReducers(reducers), {});

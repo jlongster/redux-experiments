@@ -1,6 +1,7 @@
 const React = require('react');
 const { PropTypes } = React;
 const { bindActionCreators } = require('redux');
+const ds = require('datascript');
 const mergeObj = require('./util/mergeObj');
 
 const storeShape = PropTypes.shape({
@@ -43,10 +44,10 @@ function connect(component) {
 
     handleChange: function() {
       const results = this.queryState();
+      // This actually won't work with DataScript queries anymore, the
+      // results will always be fresh. We would need a different way
+      // to track how changes occur in the DB to optimize rendering.
       const changed = Object.keys(this.state.queryResults).some(k => {
-        // Yes, we need to do a shall equal if you are using JS
-        // objects, but I'm actually going to use immutable.js so I
-        // can just do this.
         return results[k] !== this.state.queryResults[k];
       });
 
@@ -57,13 +58,11 @@ function connect(component) {
 
     queryState: function() {
       if(component.localQueries) {
-        const state = this.context.store.getState();
+        const db = this.context.store.getState();
         const queries = {};
-        component.localQueries.forEach(query => {
-          const parts = query.split('.');
-          const boundName = parts[parts.length-1];
-
-          queries[boundName] = parts.reduce((acc, k) => acc[k], state);
+        Object.keys(component.localQueries).forEach(name => {
+          const query = component.localQueries[name];
+          queries[name] = ds.q(query, db);
         });
         return queries;
       }
