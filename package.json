@@ -6,10 +6,13 @@
     "babel-loader": "^5.3.2",
     "babel-runtime": "^5.7.0",
     "datascript": "^0.11.5",
+    "immutable": "^3.7.4",
     "node-libs-browser": "^0.5.2",
     "react": "^0.13.3",
     "react-redux": "^0.2.2",
+    "react-router": "git+https://github.com/rackt/react-router.git#v1.0.0-beta1",
     "redux": "^1.0.0-alpha",
+    "transit-js": "^0.8.807",
     "webpack": "^1.10.1"
   }
 }

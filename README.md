@@ -9,3 +9,5 @@
   * [static queries w/DataScript source](https://github.com/jlongster/redux-experiments/blob/master/static-queries-datascript/main.js), [demo](http://jlongster.github.io/redux-experiments/static-queries-datascript/)
 * Use Immutable.js for a single app state
 * Integrate channels for async (optimistic updates, etc)
+
+This repo has morphed into general experiments, not really specifically redux.

@@ -15,7 +15,6 @@ let App = React.createClass({
   },
 
   render: function() {
-    console.log('renderin');
     const actions = this.props.actions;
 
     return dom.div(

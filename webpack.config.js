@@ -2,7 +2,9 @@
 module.exports = {
   entry: {
     'static-queries': ['./static-queries/main.js'],
-    'static-queries-datascript': ['./static-queries-datascript/main.js']
+    'static-queries-datascript': ['./static-queries-datascript/main.js'],
+    'routes': ['./routes/main.js'],
+    'transit': ['./transit/main.js']
   },
   output: { filename: './[name]/build/build.js' },
   module: {
