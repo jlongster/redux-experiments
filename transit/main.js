@@ -53,7 +53,7 @@ var writer = Transit.writer("json-verbose", {
 });
 
 function toTransit(val) {
-      return writer.write(val);
+  return writer.write(val);
 }
 
 function fromTransit(ts) {
