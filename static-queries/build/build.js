@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(213);
+	module.exports = __webpack_require__(215);
 
 
 /***/ },
@@ -21716,7 +21716,9 @@
 /***/ },
 /* 211 */,
 /* 212 */,
-/* 213 */
+/* 213 */,
+/* 214 */,
+/* 215 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21732,9 +21734,9 @@
 
 	var Provider = _require2.Provider;
 
-	var connect = __webpack_require__(214);
-	var reducers = __webpack_require__(216);
-	var actions = __webpack_require__(218);
+	var connect = __webpack_require__(216);
+	var reducers = __webpack_require__(218);
+	var actions = __webpack_require__(220);
 	var dom = React.DOM;
 
 	// Specify paths into the app state statically. We now know exactly
@@ -21777,7 +21779,7 @@
 	}), document.querySelector("#mount"));
 
 /***/ },
-/* 214 */
+/* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21789,7 +21791,7 @@
 
 	var bindActionCreators = _require.bindActionCreators;
 
-	var mergeObj = __webpack_require__(215);
+	var mergeObj = __webpack_require__(217);
 
 	var storeShape = PropTypes.shape({
 	  subscribe: PropTypes.func.isRequired,
@@ -21876,7 +21878,7 @@
 	module.exports = connect;
 
 /***/ },
-/* 215 */
+/* 217 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -21897,13 +21899,13 @@
 	};
 
 /***/ },
-/* 216 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var constants = __webpack_require__(217);
-	var mergeObj = __webpack_require__(215);
+	var constants = __webpack_require__(219);
+	var mergeObj = __webpack_require__(217);
 
 	function position(state, action) {
 	  if (state === undefined) state = { x: 0, y: 0 };
@@ -21945,7 +21947,7 @@
 	module.exports = { position: position, user: user };
 
 /***/ },
-/* 217 */
+/* 219 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -21957,12 +21959,12 @@
 	module.exports = { MOVE_X: MOVE_X, MOVE_Y: MOVE_Y, UPDATE_USER_LOCATION: UPDATE_USER_LOCATION };
 
 /***/ },
-/* 218 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var constants = __webpack_require__(217);
+	var constants = __webpack_require__(219);
 
 	function moveX(amount) {
 	  return {
