@@ -1,4 +1,4 @@
-const { withSideEffect } = require('redux');
+const { withSideEffect } = require('../redux');
 
 function ensureCompleted(initialState, fetchActionType, statusActionType, reducer) {
   // This could be more complex, of course, just keeping it simple for

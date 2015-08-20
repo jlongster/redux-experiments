@@ -1,5 +1,5 @@
 const React = require('react');
-const { createStore, combineReducers } = require('redux');
+const { createStore, combineReducers } = require('./redux');
 const { Provider, connect } = require('react-redux');
 const reducers = require('./reducers');
 const constants = require('./constants');

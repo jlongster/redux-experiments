@@ -1,4 +1,4 @@
-const { withSideEffect } = require('redux');
+const { withSideEffect } = require('../redux');
 const constants = require('../constants');
 const ensureCompleted = require('./ensure-completed');
 

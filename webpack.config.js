@@ -14,7 +14,8 @@ module.exports = {
         exclude: /node_modules/,
         loaders: ['babel'] }
     ]
-  }
+  },
+  devtool: '#source-map'
 };
 
 // ?optional=runtime&stage=1
