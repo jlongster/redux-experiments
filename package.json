@@ -1,5 +1,5 @@
 {
-  "name": "test-redux",
+  "name": "redux-experiments",
   "dependencies": {
     "babel": "^5.6.23",
     "babel-core": "^5.7.4",
@@ -12,6 +12,7 @@
     "react-redux": "^0.2.2",
     "react-router": "git+https://github.com/rackt/react-router.git#v1.0.0-beta1",
     "redux": "^1.0.0-alpha",
+    "redux-thunk": "^0.1.0",
     "transit-js": "^0.8.807",
     "webpack": "^1.10.1"
   }
